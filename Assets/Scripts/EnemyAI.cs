@@ -66,6 +66,11 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Animator>().SetBool("attack", true);
     }
 
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
+    }
+
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

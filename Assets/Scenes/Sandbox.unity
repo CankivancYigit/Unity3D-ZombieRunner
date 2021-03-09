@@ -3681,6 +3681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5106069175545864295, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 386567903}
     - target: {fileID: 7391242763911248353, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
       propertyPath: m_Name
       value: Player
