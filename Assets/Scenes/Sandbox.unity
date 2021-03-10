@@ -3681,10 +3681,62 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1114747378962829314, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: timeBetweenShots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114747378962829314, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1114747378962829314, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: damage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639752575756743272, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.261
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639752575756840520, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252214548025676662, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: range
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252214548025676662, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: damage
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252214548025676662, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: timeBetweenShots
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5106069175545864295, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 386567903}
+    - target: {fileID: 5114977237839298174, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727707672138187584, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727707672138187584, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727707672138187584, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: range
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6252427114972691722, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7391242763911248353, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
       propertyPath: m_Name
       value: Player

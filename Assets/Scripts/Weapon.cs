@@ -11,28 +11,28 @@ public class Weapon : MonoBehaviour
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 20f;
     [SerializeField] Ammo ammoSlot;
-    void Start()
-    {
-        
-    }
+    [SerializeField] float timeBetweenShots = 0.5f;
 
+    bool canShoot = true;
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0) && canShoot == true)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
     }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
+        canShoot = false;
         if (ammoSlot.GetCurrentAmmo() > 0)
         {
             PlayMuzzleFlash();
             ProcessRaycast();
             ammoSlot.ReduceAmmo();
         }
-        
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     private void ProcessRaycast()
