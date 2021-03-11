@@ -350,6 +350,8 @@ MonoBehaviour:
   range: 100
   damage: 20
   ammoSlot: {fileID: 0}
+  ammoType: 1
+  timeBetweenShots: 0.5
 --- !u!1 &2806754061951333768
 GameObject:
   m_ObjectHideFlags: 0
