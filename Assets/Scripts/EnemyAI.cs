@@ -10,12 +10,14 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float chaseRange = 10f;
     [SerializeField] float turnSpeed = 5f;
     NavMeshAgent navMeshAgent;
+    EnemyHealth enemyHealth;
 
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     void Update()
@@ -30,7 +32,13 @@ public class EnemyAI : MonoBehaviour
         {
             isProvoked = true;
             
-        } 
+        }
+
+        if (enemyHealth.IsDead())
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
     }
 
     void EngageTarget()
