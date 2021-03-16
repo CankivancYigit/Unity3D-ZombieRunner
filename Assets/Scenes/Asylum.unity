@@ -17405,6 +17405,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!223 &1753238319 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 6905632397661038381, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
+  m_PrefabInstance: {fileID: 1235807709170798856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1757715665
 Mesh:
   m_ObjectHideFlags: 0
@@ -21210,6 +21215,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 576523217715154722, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1235807707670446816, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
       propertyPath: m_Name
       value: UI
@@ -21261,6 +21270,22 @@ PrefabInstance:
     - target: {fileID: 1235807707670446817, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235807707844787836, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235807708005221745, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235807708919766995, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301911789178760156, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
+      propertyPath: m_Name
+      value: Blood Splatter
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16d5ee33dbbf0d24ca017946e454b5c4, type: 3}
@@ -21368,6 +21393,10 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 9385646}
+    - target: {fileID: 2730268854663734546, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
+      propertyPath: damageDisplay
+      value: 
+      objectReference: {fileID: 1753238319}
     - target: {fileID: 5106069175545864295, guid: 7dd65ed6ec553be46912c6e59d742e19, type: 3}
       propertyPath: gameOverCanvas
       value: 
