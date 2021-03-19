@@ -13,6 +13,12 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("I'm dead");
             GetComponent<DeathHandler>().HandleDeath();
+
+            AudioSource[] allSounds = FindObjectsOfType<AudioSource>();
+            for (int i = 0; i < allSounds.Length; i++)
+            {
+                allSounds[i].enabled = false;
+            }
         }
     }
 }

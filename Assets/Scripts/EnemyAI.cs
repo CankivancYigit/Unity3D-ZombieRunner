@@ -9,10 +9,14 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float chaseRange = 10f;
     [SerializeField] float turnSpeed = 5f;
 
+    [SerializeField] AudioSource idleSound;
+    [SerializeField] AudioSource attackSound;
+    [SerializeField] AudioSource chaseSound;
+
     NavMeshAgent navMeshAgent;
     EnemyHealth enemyHealth;
     Transform target;
-
+    
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
     void Start()
@@ -20,6 +24,8 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         enemyHealth = GetComponent<EnemyHealth>();
         target = FindObjectOfType<PlayerHealth>().transform;
+        //idleSound.Play();
+
     }
 
     void Update()
@@ -29,6 +35,7 @@ public class EnemyAI : MonoBehaviour
         if (isProvoked)
         {
             EngageTarget();
+            idleSound.Stop();
         }
         else if (distanceToTarget <= chaseRange)
         {
@@ -62,6 +69,10 @@ public class EnemyAI : MonoBehaviour
         GetComponent<Animator>().SetBool("attack", false);
         GetComponent<Animator>().SetTrigger("move");
         navMeshAgent.SetDestination(target.position);
+        if (chaseSound.isPlaying == false)
+        {
+            chaseSound.Play();
+        }
     }
 
     private void FaceTarget()
@@ -74,6 +85,12 @@ public class EnemyAI : MonoBehaviour
     private void AttackTarget()
     {
         GetComponent<Animator>().SetBool("attack", true);
+        chaseSound.Stop();
+        if (attackSound.isPlaying == false)
+        {
+            attackSound.Play();
+        }
+        
     }
 
     public void OnDamageTaken()
@@ -85,5 +102,15 @@ public class EnemyAI : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
+    }
+
+    public AudioSource GetChaseSound()
+    {
+        return chaseSound;
+    }
+
+    public AudioSource GetAttackSound()
+    {
+        return attackSound;
     }
 }
