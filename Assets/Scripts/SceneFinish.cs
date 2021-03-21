@@ -17,6 +17,7 @@ public class SceneFinish : MonoBehaviour
         FindObjectOfType<WeaponSwitcher>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        Destroy(gameObject);
 
         AudioSource[] allSounds = FindObjectsOfType<AudioSource>();
         for (int i = 0; i < allSounds.Length; i++)

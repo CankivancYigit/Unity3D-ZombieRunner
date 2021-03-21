@@ -646,7 +646,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseRange: 10
-  turnSpeed: 5
+  turnSpeed: 50
   idleSound: {fileID: 4374209353136937521}
   attackSound: {fileID: 5870632440357353409}
   chaseSound: {fileID: 8856862622224233464}
